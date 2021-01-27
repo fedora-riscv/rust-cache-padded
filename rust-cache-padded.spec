@@ -6,7 +6,7 @@
 
 Name:           rust-%{crate}
 Version:        1.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Prevent false sharing by padding and aligning to the length of a cache line
 
 # Upstream license specification: Apache-2.0 OR MIT
@@ -71,5 +71,8 @@ which use "default" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1.1.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Wed Jan 06 2021 Fabio Valentini <decathorpe@gmail.com> - 1.1.1-1
 - Initial package
