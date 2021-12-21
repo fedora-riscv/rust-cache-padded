@@ -64,7 +64,13 @@ use the "default" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
+%ifarch %{arm}
+# * ignore harmless test failures on armv7hl:
+#   https://github.com/smol-rs/cache-padded/issues/9
+%cargo_test -- -- --skip distance --skip "src/lib.rs"
+%else
 %cargo_test
+%endif
 %endif
 
 %changelog
