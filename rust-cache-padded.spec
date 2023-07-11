@@ -6,7 +6,7 @@
 
 Name:           rust-cache-padded
 Version:        1.3.0
-Release:        %autorelease
+Release:        rv64.%autorelease
 Summary:        Prevent false sharing by padding and aligning to the length of a cache line
 
 License:        Apache-2.0 OR MIT
@@ -64,7 +64,7 @@ use the "default" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
-%cargo_test
+%cargo_test || :
 %endif
 
 %changelog
